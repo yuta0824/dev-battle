@@ -7,9 +7,15 @@ body {
   color: #333;
   line-height: 1.6;
 }
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
 
 .section {
-  padding: 60px 0;
+  padding: 60px 0 0;
+  overflow: hidden;
 }
 .section:not(:first-child) {
   border-top: 1px solid #eaeaea;
@@ -93,10 +99,10 @@ body {
 .battle::after {
   z-index: -1;
   width: 100vw;
-  height: 60%;
+  height: 70%;
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -30px;
   left: 50%;
   transform: translateX(-50%);
   background-image: url(../img/bg-ground.png);
@@ -105,6 +111,11 @@ body {
   background-position: top center;
   background-size: cover;
 }
+@media (max-width: 768px) {
+  .battle::after {
+    min-height: 300px;
+  }
+}
 
 .battle__field {
   max-width: 640px;
@@ -112,6 +123,11 @@ body {
   display: flex;
   justify-content: center;
   gap: 40px;
+}
+@media (max-width: 768px) {
+  .battle__field {
+    gap: 20px;
+  }
 }
 
 .battle__message {

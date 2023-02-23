@@ -2,7 +2,7 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=1000, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>モンスターを倒すゲーム</title>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
@@ -70,14 +70,16 @@
 				=================================== -->
         <div class="battle mt-30">
           <div class="battle__field">
-            <div class="battleWrap__monster monster" id="js-monster"><!-- モンスター -->
+            <div class="battleWrap__monster monster" id="js-monster">
+              <!-- モンスター -->
               <div class="monster__img"><img src="./img/devil.png" alt="" /></div>
               <div class="monster__meta">
                 <div class="monster__name">モンスター</div>
                 <div class="monster__hp">
                   <div class="monster__hp-tag">HP</div>
                   <span class="monster__hp-wrap">
-                    <span class="monster__hp-bar" id="js-monster-hp"></span><!-- モンスターのHP -->
+                    <span class="monster__hp-bar" id="js-monster-hp"></span
+                    ><!-- モンスターのHP -->
                   </span>
                 </div>
               </div>
@@ -86,11 +88,13 @@
               <div class="monster__img"><img src="./img/yuusya.png" alt="" /></div>
               <div class="monster__meta">
                 <div class="monster__name">勇者</div>
-                <button class="btn-attack" id="js-attack-btn">▷ 攻撃</button><!-- 攻撃ボタン -->
+                <button class="btn-attack" id="js-attack-btn">▷ 攻撃</button
+                ><!-- 攻撃ボタン -->
               </div>
             </div>
           </div>
-          <div id="js-message" class="battle__message text-wrap">　</div><!-- メッセージボックス -->
+          <div id="js-message" class="battle__message text-wrap">　</div>
+          <!-- メッセージボックス -->
         </div>
       </div>
     </section>
