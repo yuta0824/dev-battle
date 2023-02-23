@@ -48,7 +48,7 @@ jQuery("#js-attack-btn").click(function () {
     monsterHpPercent = 0; //モンスターのHPの%は0
     jQuery("#js-monster,#js-attack-btn").fadeOut(); //モンスターと攻撃ボタンを非表示
     jQuery("#js-message")
-      .text("勇者の" + attackName + attackPoint + "ダメージ") //メッセージを表示
+      .text(`${attackName} / ${attackPoint}ダメージ`) //攻撃名と攻撃ポイントをメッセージを表示
       .delay(1000) //1秒後に
       .queue(function () {
         jQuery(this).text("敵を倒しました！！").dequeue(); //メッセージを表示
@@ -57,7 +57,7 @@ jQuery("#js-attack-btn").click(function () {
     //もしモンスターのHPが0以下ではない時は
     monsterHpPercent = monsterHp / monsterMaxHp; //モンスターのHPの%計算 [モンスターのHPの% = モンスターのHP / モンスターの最大HP]
     jQuery("#js-message")
-      .text(attackName + "　" + attackPoint + "ダメージ") //攻撃名と攻撃ポイントをメッセージを表示
+      .text(`${attackName} / ${attackPoint}ダメージ`) //攻撃名と攻撃ポイントをメッセージを表示
       .delay(1000) //1秒後に
       .queue(function () {
         jQuery(this).text("　").dequeue(); //メッセージを非表示
