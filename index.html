@@ -11,7 +11,7 @@
   <body>
     <section class="section">
       <div class="inner">
-        <h2 class="section-title">モンスターを倒すゲーム</h2>
+        <h1 class="section-title">モンスターを倒すゲーム</h1>
         <div class="text-wrap">
           <p class="font-bold">実装の条件</p>
           <ul>
@@ -70,9 +70,9 @@
 				=================================== -->
         <div class="battle mt-30">
           <div class="battle__field">
-            <div class="battleWrap__monster monster" id="js-monster">
+            <div class="monster" id="js-monster">
               <!-- モンスター -->
-              <div class="monster__img"><img src="./img/devil.png" alt="" /></div>
+              <div class="monster__img"><img src="./img/devil.png" alt="モンスター" /></div>
               <div class="monster__meta">
                 <div class="monster__name">モンスター</div>
                 <div class="monster__hp">
@@ -84,8 +84,8 @@
                 </div>
               </div>
             </div>
-            <div class="battleWrap__monster monster" id="js-brave">
-              <div class="monster__img"><img src="./img/yuusya.png" alt="" /></div>
+            <div class="monster" id="js-brave">
+              <div class="monster__img"><img src="./img/yuusya.png" alt="勇者" /></div>
               <div class="monster__meta">
                 <div class="monster__name">勇者</div>
                 <button class="btn-attack" id="js-attack-btn">▷ 攻撃</button
@@ -93,7 +93,7 @@
               </div>
             </div>
           </div>
-          <div id="js-message" class="battle__message text-wrap">　</div>
+          <div id="js-message" class="battle__message">　</div>
           <!-- メッセージボックス -->
         </div>
       </div>
@@ -102,6 +102,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./js/script.js"></script>
     <!-- 回答コード -->
-    <!-- <script src="./js/complete.js"></script> -->
+    <script src="./js/complete.js"></script>
   </body>
 </html>

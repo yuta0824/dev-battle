@@ -136,6 +136,9 @@ body {
   max-width: 640px;
   margin: 15px auto 0;
   background: rgba(255, 255, 255, 0.8);
+  min-width: 320px;
+  padding: 10px 20px;
+  border-radius: 10px;
 }
 
 .monster {
