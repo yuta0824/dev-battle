@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1000, initial-scale=1.0" />
+    <title>モンスターを倒すゲーム</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <section class="section">
+      <div class="inner">
+        <h2 class="section-title">モンスターを倒すゲーム</h2>
+        <div class="text-wrap">
+          <p class="font-bold">実装の条件</p>
+          <ul>
+            <li class="font-bold">
+              モンスターのHP
+              <ul>
+                <li>初期HPは200</li>
+                <li>攻撃を受ける毎にHPゲージの%を減らす</li>
+                <li>HPが30%以下になったらバーを赤色に変える</li>
+                <li>
+                  モンスターのHPが0になったら
+                  <ul>
+                    <li>モンスターをfadeOut</li>
+                    <li>メッセージ「モンスターを倒しました！！」を表示</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="font-bold">
+              攻撃ボタンをクリックした時
+              <ul>
+                <li>2秒間はボタン操作を無効</li>
+              </ul>
+              <ul>
+                <li>
+                  勇者に"is-anm"クラスを付与して攻撃アニメーション。
+                  <ul>
+                    <li>攻撃後に"is-anm"クラスを外す</li>
+                  </ul>
+                </li>
+                <li>
+                  配列からランダムで攻撃を選択
+                  <ul>
+                    <li>素手で攻撃 : 30ダメージ</li>
+                    <li>剣で攻撃 : 50ダメージ</li>
+                    <li>会心の一撃 : 100ダメージ</li>
+                  </ul>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  メッセージを表示
+                  <ul>
+                    <li>技名</li>
+                    <li>技のダメージ</li>
+                    <li>メッセージは1秒後に非表示にする</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ===================================
+				ここから実装部分
+				=================================== -->
+        <div class="battle mt-30">
+          <div class="battle__field">
+            <div class="battleWrap__monster monster" id="js-monster"><!-- モンスター -->
+              <div class="monster__img"><img src="./img/devil.png" alt="" /></div>
+              <div class="monster__meta">
+                <div class="monster__name">モンスター</div>
+                <div class="monster__hp">
+                  <div class="monster__hp-tag">HP</div>
+                  <span class="monster__hp-wrap">
+                    <span class="monster__hp-bar" id="js-monster-hp"></span><!-- モンスターのHP -->
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="battleWrap__monster monster" id="js-brave">
+              <div class="monster__img"><img src="./img/yuusya.png" alt="" /></div>
+              <div class="monster__meta">
+                <div class="monster__name">勇者</div>
+                <button class="btn-attack" id="js-attack-btn">▷ 攻撃</button><!-- 攻撃ボタン -->
+              </div>
+            </div>
+          </div>
+          <div id="js-message" class="battle__message text-wrap">　</div><!-- メッセージボックス -->
+        </div>
+      </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/complete.js"></script><!-- 回答コード -->
+  </body>
+</html>
